@@ -1,0 +1,180 @@
+
+div.skill {
+    perspective: 1000px;
+    /* background-color: violet; */
+    /* transition: 1s ease;  */
+    cursor: pointer;
+}
+
+div.skill div.skillBox {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 1s ease; 
+    /* position: relative; */
+}
+div.skill div.skillBox div.skillFront, div.skill div.skillBox div.skillBack {
+    /* background: violet; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+div.skill.isActive div.skillBox {
+    transform: rotateY(180deg);
+}
+div.skill div.skillBox div.skillBack {
+    /* background-color: #eee; */
+    transform: rotateY(180deg);
+}
+div.skill p {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+div.wrappo {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+div.skills div.skill:hover {
+    
+    box-shadow: 0 0 15px goldenrod;
+}
+div.skills div.skill.isActive:hover  {
+    box-shadow: 0 0 0 #111;
+}
+div.skillOuterBox div.skill.isActive {
+    /* background-color: #eee; */
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30vw;
+    height: 50vh;
+    z-index: 2;
+}
+div.skill div.skillBox div.skillBack div.back {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin: auto; */
+    width: 80%;
+    height: 80%;
+    background-color: #111;
+    z-index: -1;
+}
+ div.skillOuterBox div.skill {
+     width: 100%;
+     height: 100%;
+ }
+ div.skill div.skillBox div.skillBack div.wrappo2 {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+ }
+ div.skill div.skillBack {
+     font-size: 10px;
+     /* text-align: justify; */
+     text-align: center;
+ }
+ div.skill.isActive div.skillBack {
+    font-size: 20px;
+}
+@media(max-width: 1366px) and (orientation: landscape){
+    div.skillOuterBox div.skill.isActive {
+        width: 50vw;
+    }
+}
+@media(max-width: 824px) and (orientation: landscape){
+    div.skillOuterBox div.skill.isActive  {
+        height: 80vh;
+        
+    }
+    div.skill.isActive div.skillBack {
+        font-size: 16px;
+    }
+    div.skill div.skillBack {
+        font-size: 7px;
+    }
+    div.skills div.skill:hover {
+        box-shadow: 0 0 0 #111;
+    }
+    div.skillOuterBox div.skill.isActive {
+        top: 275%;
+    }
+    div.skills div.skillFront {
+        font-size: 18px;
+    }
+}
+@media(max-width: 640px) and (orientation: landscape){
+    div.skillOuterBox div.skill.isActive {
+        top: 300%;
+    }
+}
+@media(max-width: 667px) and (orientation: landscape){
+    div.skills div.skillFront {
+        font-size: 14px;
+    }
+    div.skill.isActive div.skillBack {
+        font-size: 14px;
+    }
+    div.skill div.skillBack {
+        font-size: 5px;
+    }
+}
+@media(max-width: 568px) and (orientation: landscape){
+    div.skill.isActive div.skillBack {
+        font-size: 12px;
+    }
+}
+@media(max-width: 1024px) and (orientation: portrait) {
+    div.skillOuterBox div.skill.isActive {
+        top: 230%;
+    }
+    div.skillOuterBox div.skill.isActive {
+        width: 60vw;
+    }
+}
+@media(max-width: 560px) and (orientation: portrait){
+    div.skills div.skillFront {
+        font-size: 14px;
+    }
+    div.skillOuterBox div.skill.isActive {
+        top: 240%;
+    }
+    div.skillOuterBox div.skill.isActive {
+        width: 85vw;
+    }
+    div.skill div.skillBack {
+        font-size: 7px;
+    }
+    div.skill.isActive div.skillBack {
+        font-size: 17px;
+    }
+}
+@media(max-width: 360px) and (orientation: portrait){
+    div.skillOuterBox div.skill.isActive {
+        top: 250%;
+    }
+    div.skill.isActive div.skillBack {
+        font-size: 14px;
+    }
+    div.skill div.skillBack {
+        font-size: 5px;
+    }
+    div.skills div.skillFront {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,229 @@
+
+div#contact {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #111;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    /* margin-bottom: 100px; */
+}
+div#contact .form {
+    position: relative;
+    /* top: 50%; */
+    /* left: 30%; */
+    /* transform: translate(-50%,-50%); */
+  
+    
+}
+div.form h3 {
+    font-size: 40px;
+    color: goldenrod;
+    margin: 0;
+    margin-top: 4%;
+}
+div.form input {
+    display: block;
+    width: 80%;
+    /* margin: 30px auto; */
+    font-family: Roboto;
+    background-color: #202020;
+    border-style: none;
+    outline: none;
+    box-shadow: 0 0 10px 1px goldenrod;
+    color: #eee;
+    /* border-radius: 30%; */
+}
+div.form textarea {
+    display: block;
+    width: 80%;
+    /* margin: 30px auto; */
+    font-family: Roboto;
+    background-color: #202020;
+    border-style: none;
+    outline: none;
+    box-shadow: 0 0 10px 1px goldenrod;
+    color: #eee;
+    /* border-radius: 30%; */
+}
+div.form input.mail {
+    height: 2rem;
+    margin-top: 18%;
+   
+}
+div.form input.phone {
+    height: 2rem;
+    margin-bottom: 18%;
+}
+div.form {
+    flex-basis: 30%;
+    height: 80vh;
+    /* text-align: center; */
+    background-color: #202020;
+    color: goldenrod;
+    font-family: Oswald;
+  
+   
+    
+    
+    
+}
+div.form form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+div.form p {
+    font-size: 25px;
+    display: block;
+}
+div.form textarea {
+    
+    height: 30%;
+    
+}
+div.form input.text::placeholder {
+    background-color: yellow;
+    
+}
+div.form button {
+    border-style: none;
+    background-color: #111;
+    color: goldenrod;
+    font-family: Oswald;
+    font-size: 20px;
+    box-shadow: 0 0 10px 1px goldenrod;
+    outline: none;
+    padding: 10px;
+    display: block;
+    margin-bottom: 5%;
+    margin-top: 4%;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+div.form button::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 200%;
+
+    background-color: goldenrod;
+    position: absolute;
+    top: -40%;
+    left: 140%;
+   
+    transform: skew(-45deg,45deg);
+    transition: .5s ease;
+    box-shadow: 0 0 2px 1px goldenrod;
+}
+div.form button:hover::after {
+    
+    left: -50%;
+}
+
+div.form input {
+    padding: 3px 7px;
+}
+div.form textarea {
+    padding: 3px 7px;
+}
+div.form h3+p {
+    position: absolute;
+    top: 12%;
+    
+}
+div.form {
+    transform: translateX(-200%);
+    
+}
+div.form.activeContact {
+    animation: contactAnm 2s ease;
+    transform: translateX(0%);
+}
+div.form {
+    min-width: 400px;
+}
+@keyframes contactAnm {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+@media(max-width: 824px){
+    div.form.activeContact {
+        animation: none;
+    }
+}
+@media(max-width: 824px) and (orientation: landscape) {
+    div#contact {
+        height: 350vh;
+    }
+    div#contact .form {
+        flex-basis: 70%;
+        height: 200vh;
+    }
+}
+@media(max-width: 568px) and (orientation: landscape){
+    div#contact {
+        height: 380vh;
+    }
+    div#contact .form h3 {
+        font-size: 30px;
+    }
+    div#contact .form p {
+        transform: translateY(-20%);
+        font-size: 18px;
+    }
+}
+@media(max-width: 1024px) and (orientation: portrait){
+    div#contact {
+        height: 100vh;
+    }
+    
+}
+@media(max-width: 768px) and (orientation: portrait){
+    div#contact {
+        height: 100vh;
+    }
+}
+@media(max-width: 560px) and (orientation: portrait){
+    div#contact {
+        height: 195vh;
+    }
+    div#contact .form  {
+       height: 100vh;
+    }
+    
+}
+@media(max-width: 375px) and (orientation: portrait){
+    div#contact div.form {
+        min-width: 360px;
+    }
+    div#contact div.form h3 {
+        font-size: 35px;
+    }
+}
+@media(max-width: 320px) and (orientation: portrait){
+    div#contact {
+        height: 220vh;
+    }
+    div#contact div.form h3 {
+        font-size: 30px;
+    }
+    div#contact div.form {
+       min-width: 310px;
+    }
+    footer {
+        
+        font-size: 7px;
+    }
+}

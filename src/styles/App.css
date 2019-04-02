@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+
+body {
+    height: 300vh;
+    background-color: #111;
+    transition: .5s;
+    max-width: 1920px;
+    
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+footer {
+    /* display: block; */
+    color: white;
+    background-color: #202020;
+    height: 3vh;
+}
+p, h1, h2, h3, span {
+    cursor: default;
+}
+

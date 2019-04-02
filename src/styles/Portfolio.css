@@ -1,0 +1,303 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+div.portfolio {
+    background-color: #111;
+    min-height: 100vh;
+    /* height: 100vh; */
+    max-height: 100vh;
+    position: relative;
+}
+div.projects {
+    position: absolute;
+    /* background-color: gray; */
+    /* display: flex; */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    perspective: 1000px;
+    /* background-color: gray; */
+}
+
+div.portfolio h1 {
+   
+    text-align: center;
+    font-size: 60px;
+    font-family: Oswald;
+    margin-top: 10%;
+    padding: 20px;
+    /* text-transform: uppercase; */
+    /* background-color: #111; */
+    color: goldenrod;
+    text-shadow: 0 0 8px goldenrod;
+    background-color: #202020;
+    
+    
+}
+
+div.projects {
+    position: absolute;
+    background-color: gray;
+    width: 65vw;
+}
+
+
+div.projects a {
+    display: block;
+    width: 25vw;
+    height: 30vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    perspective: 1000px;
+    transition: .5s ease;
+    cursor: pointer;
+
+    }
+    
+
+div.projects a.first {
+    background-color: green;
+    transform: translateX(-140%) translateY(-50%) translateZ(-100px) skew(2deg,-1deg);
+    animation: onFirst .5s ease;
+}
+div.projects a.second {
+    background-color: red;
+    z-index: 1;
+}
+div.projects a.third {
+    background-color: blue;
+    transform: translateX(40%) translateY(-50%) translateZ(-100px) skew(-2deg, 1deg);
+    z-index: -2;
+}
+div.projects a:nth-child(2) {
+    background-image: url('../images/projectEnigma.png');
+    background-size: cover;
+  background-position-x: 50%;
+}
+div.projects button:first-child {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    z-index: 3;
+    /* height: 25vh; */
+    border-style: none;
+  
+   
+    width: 5vw;
+    background-color:rgba(0,0,0,.5);
+    color: #eee;
+    font-size: 40px;
+    color: goldenrod;
+}
+div.projects button:last-child {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translateY(-50%);
+    z-index: 3;
+    /* height: 25vh; */
+    border-style: none;
+    background-color:rgba(0,0,0,.5);
+    color: #eee;
+    font-size: 40px;
+    width: 5vw;
+    color: goldenrod;
+    
+}
+div.projects button {
+    outline: none;
+    height: 30vh;
+    cursor: pointer;
+}
+div.projects button:hover {
+  
+    box-shadow: 0 0 12px 1px goldenrod;
+}
+@keyframes onFirst {
+    0% {
+        z-index: -2;
+    }
+    99% {
+        z-index: -2;
+    }
+    100% {
+        z-index: -3;
+    }
+}
+div.info {
+    position: absolute;
+    bottom: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-family: Roboto;
+    color: goldenrod;
+  
+}
+div.info h2 {
+    font-size: 40px;
+}
+div.info p {
+    font-size: 20px;
+}
+div.portfolio h1 {
+    position: relative;
+}
+div.portfolio h1 span {
+    position: relative;
+    left: -100%;
+ 
+}
+div.portfolio h1 span.activeTitle {
+    animation: projectsTitleAnm 2s ease;
+    left: 0;
+}
+div.portfolio>div.activeTitle {
+    animation: appear 3s ease-out;
+}
+@keyframes projectsTitleAnm {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+}
+@media(max-width: 824px) {
+    div.portfolio h1 span.activeTitle {
+        animation: none;
+    }
+    div.portfolio>div.activeTitle {
+        animation: none;
+    }
+}
+@media(max-width: 1024px) and (orientation: landscape){
+    div.slider div.info  {
+        transform: translate(-50%,20%);
+    }
+    div.projects a {
+        width: 30vw;
+    }
+    div.projects {
+        width: 80vw;
+    }
+    div.slider div.projects button {
+        width: 10vw;
+    }
+}
+@media(max-width: 824px) and (orientation: landscape) {
+    div.portfolio h1 {
+        font-size: 45px;
+    }
+    div.projects a {
+        height: 60vh;
+        
+
+    }
+    div.projects {
+        top: 40%;
+    }
+    div.portfolio {
+        max-height: 180vh;
+        height: 180vh;
+    }
+    div.projects button {
+        height: 60vh;
+    }
+    div.info {
+        bottom: 15%;
+    }
+}
+@media(max-width: 667px) and (orientation: landscape){
+    div.info h2 {
+        font-size: 30px;
+    }
+    div.portfolio h1 {
+        font-size: 40px;
+    }
+}
+@media(max-width: 1024px) and (orientation: portrait){
+    div.projects a {
+        width: 30vw;
+    }
+    div.projects {
+        width: 80vw;
+    }
+    div.projects {
+        top: 50%;
+    }
+    div.portfolio {
+        min-height: 60vh;
+        height: 60vh;
+    }
+    div.info {
+        bottom: 0%;
+    }
+    div.info h2 {
+        width: 80vw;
+    }
+}
+@media(max-width: 768px) and (orientation: portrait){
+    div.portfolio {
+        min-height: 90vh;
+        height: 90vh;
+    }
+}
+@media(max-width: 560px) and (orientation: portrait){
+    div.portfolio {
+        min-height: 100vh;
+        height: 100vh;
+    }
+    div.info {
+        bottom: 7%;
+        
+    }
+    div.info h2 {
+        font-size: 30px;
+        width: 90vw;
+    }
+    div.projects a {
+        height: 25vh;
+    }
+    div.portfolio div.projects button {
+        height: 25vh;
+        width: 15vw;
+    }
+    div.info p {
+        font-size: 18px;
+    }
+}
+@media(max-width: 375px) and (orientation: portrait){
+    div.info h2 {
+        font-size: 25px;
+    }
+    div.info p {
+        font-size: 18px;
+    }
+    div.portfolio h1 {
+        font-size: 50px;
+    }
+}
+@media(max-width: 320px) and (orientation: portrait){
+    div.portfolio h1 {
+        font-size: 40px;
+    }
+    div.info h2 {
+        font-size: 20px;
+    }
+    div.info p {
+        font-size: 14px;
+    }
+}

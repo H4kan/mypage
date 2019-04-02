@@ -1,0 +1,214 @@
+
+.welcome {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    height: 100vh;
+    align-content: space-around;
+    justify-content: space-around;
+    /* flex-wrap: wrap; */
+    margin-bottom: 10vh;
+}
+.welcome h1 {
+    width: 100%;
+    flex-basis: 100%;
+    text-align: center;
+    font-weight: normal;
+    font-family: Oswald;
+    font-size: 70px;
+
+    color: goldenrod;
+    text-shadow: 0 0 8px goldenrod;
+    
+}
+.welcome h1 span:nth-child(1) {
+    animation: blink 6s infinite;
+}
+    
+.welcome h1 span:nth-child(2) {
+    animation: blink 6s infinite 2s;
+}
+.welcome h1 span:nth-child(3) {
+    animation: blink 6s infinite 4s;
+}
+
+.welcome div.about {
+   
+    /* background-color:#444; */
+   
+    transform: translateY(-10%);
+    color: goldenrod;    
+}
+.welcome div.about div.profile {
+    margin: auto;
+    width: 27vh;
+    height: 27vh;
+    
+    background-image: url(../images/profile.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    box-shadow: 0 0 24px goldenrod;
+    transform: translateY(-50%);
+}
+
+.welcome div.about p {
+    
+    text-align: center;
+    padding: 0 10px;
+    transform: translateY(-70%);  
+    
+}
+
+
+
+div.about {
+    /* background-color: #202020; */
+    margin-left: 7%;
+    width: 27vh;
+    height: 46.5vh;
+    align-self: flex-end;
+    
+}
+div.wrappy {
+    background-color: #202020;
+}
+div.about {
+    transition: 1.5s ease;
+    position: relative;
+    left: -30%;
+}
+div.about.slidingClass {
+    left: 0%;
+}
+
+@keyframes blink {
+    0% {
+        color: goldenrod;
+        text-shadow: 0 0 8px goldenrod;
+    }
+    80% {
+        color: goldenrod;
+        text-shadow: 0 0 8px goldenrod;
+    }
+    81% {
+        color: #111;
+        text-shadow: 0 0 3px #111;
+    }
+    82% {
+        color: goldenrod;
+        text-shadow: 0 0 8px goldenrod;
+    }
+    83% {
+        color: #111;
+        text-shadow: 0 0 3px #111;
+    }
+    85% {
+        color: goldenrod;
+        text-shadow: 0 0 8px goldenrod;
+    }
+    100% {
+        color: goldenrod;
+        text-shadow: 0 0 8px goldenrod;
+    }
+}
+@media(max-width: 824px) {
+    div.about {
+        left: 0%;
+    }
+}
+@media(max-width: 824px) and (orientation: landscape){
+   section.welcome h1 {
+       font-size: 50px;
+   }
+   section.welcome {
+       height: 230vh;
+   } 
+   section.welcome div.about {
+       
+       flex-basis: 30%;
+   }
+   section.welcome div.skills {
+       flex-basis: 80%;
+   }
+   .welcome div.about {
+       margin-left: 0; 
+   }
+   section.welcome div.about p {
+       transform: translateY(-30%);
+       text-align: center;
+   }
+}
+@media(max-width: 640px) and (orientation: landscape){
+    section.welcome {
+        height: 250vh;
+        align-content: space-between;
+    }
+    
+}
+@media(max-width: 568px) and (orientation: landscape){
+    section.welcome {
+        height: 250vh;
+        
+    }
+    section.welcome div.about p {
+        font-size: 13px;
+    }
+    section.welcome div.skills {
+        height: 100vh;
+    }
+}
+@media(max-width: 1024px) and (orientation: portrait) {
+    section.welcome {
+        height: 170vh;
+    } 
+    section.welcome div.skills {
+        flex-basis: 80%;
+    }
+    section.welcome div.about {
+        /* background-color: blue; */
+        margin: 0;
+        transform: translateY(20%);
+        font-size: 18px;
+    }
+}
+@media(max-width: 768px) and (orientation: portrait){
+    section.welcome div.about p {
+        text-align: center;
+    }
+}
+@media(max-width: 560px) and (orientation: portrait){
+    section.welcome h1 {
+        font-size: 43px;
+    }
+    section.welcome {
+        height: 180vh;
+    } 
+    section.welcome div.about p {
+        transform: translateY(-50%);
+        font-size: 16px;
+    }
+    
+}
+@media(max-width: 375px) and (max-height: 667px) and (orientation: portrait){
+    section.welcome {
+        height: 190vh;
+    } 
+}
+@media(max-width: 360px) and (orientation: portrait){
+    section.welcome h1 {
+        font-size: 35px;
+    }
+    section.welcome div.about p {
+        font-size: 14px;
+    }
+}
+@media(max-width: 320px) and (orientation: portrait){
+    section.welcome {
+        height: 190vh;
+    } 
+    section.welcome div.about {
+        transform: translateY(-5%);
+    }
+}

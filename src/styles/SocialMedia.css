@@ -1,0 +1,99 @@
+
+div.socialMedia {
+    background-color:white;
+    flex-basis: 20%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #202020;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.socialMedia a.social {
+    margin-left: 15px;
+    height: 20%;
+    text-decoration: none;
+    color: goldenrod;
+    position: relative;
+    display: flex;
+    
+    /* background-color: ; */
+}
+.socialMedia a.social p {
+    margin-left: 20px;
+}
+.socialMedia h3 {
+    color: goldenrod;
+    font-family: Oswald;
+    font-size: 30px;
+    text-align: center;
+}
+.socialMedia a.social p {
+    text-shadow: 0 0 2px goldenrod;
+}
+    
+.socialMedia.activeSocial {
+    transform: translateX(200%);
+    
+}
+.socialMedia.activeSocial {
+    animation: socialAnm 2s ease;
+    transform: translateX(0%);
+}
+@keyframes socialAnm {
+    0% {
+        transform: translateX(200%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+div.socialMedia {
+    min-width: 300px;
+}
+@media(max-width: 824px){
+    .socialMedia.activeSocial {
+        animation: none;
+    }
+}
+@media(max-width: 824px) and (orientation: landscape){
+    div#contact {
+        align-items: space-between;
+    }
+    div#contact div.socialMedia {
+        flex-basis: 70%;
+        height: 120vh;
+        margin-bottom: 30px;
+    }
+}
+@media(max-width: 824px) and (orientation: landscape){
+    div#contact div.socialMedia {
+        height: 130vh;
+    }
+}
+@media(max-width: 568px) and (orientation: landscape){
+    
+    div#contact div.socialMedia {
+        height: 150vh;
+    }
+}
+@media(max-width: 1024px) and (orientation: portrait){
+    div#contact div.socialMedia {
+        flex-basis: 40%;
+       
+    }
+}
+@media(max-width: 1024px) and (orientation: portrait){
+
+}
+@media(max-width: 320px) and (orientation: portrait){
+    div#contact div.socialMedia {
+        height: 100vh;
+    }
+    div#contact div.socialMedia a.social p {
+        font-size: 13px;
+    }
+}

@@ -1,0 +1,99 @@
+
+div.backdrop {
+    background-image: url(../images/image1.jpg);
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: -1;
+    background-attachment: fixed;
+    background-size: cover;
+ 
+} 
+div.shadow {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background-color: #000;
+    opacity: 0.5;
+    height: 100vh;
+    z-index: 2;
+    width: 100vw;
+}
+header {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #eee;
+
+    font-family: 'Oswald';
+    z-index: 3;
+    
+}
+.header h1 {
+    font-weight: normal;
+    font-size: 80px;
+   text-shadow: 0 0 12px violet;
+    
+}
+.header h2 {
+    font-weight: normal;
+    font-size: 40px;
+    text-align: right;
+    text-shadow: 0 0 12px violet;
+}
+nav {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    z-index: 4;
+}
+nav button.language {
+    padding: 10px 17px;
+    border-style: none; 
+    background-color: #111;
+    color: goldenrod;
+    outline: none;
+    cursor: pointer;
+}
+nav button.language.active {
+    background-color: #333;
+}
+@media(max-width: 1024px) and (orientation: landscape){
+    header.header h1 {
+        font-size: 63px;
+    }
+    header.header h2 {
+        font-size: 28px;
+    }
+}
+@media(max-width: 823px) and (orientation: landscape){
+    header.header h1 {
+        font-size: 33px;
+    }
+    header.header h2 {
+        font-size: 15px;
+    }
+    button.scroller {
+        width: 40px;
+    }
+
+    div.backdrop button.scroller:after {
+        border: 17px solid rgba(0,0,0,0);
+    }
+}
+@media(max-width: 560px) and (orientation: portrait){
+    header.header h1 {
+        font-size: 40px;
+    }
+    header.header h2 {
+        font-size: 20px;
+    }
+    button.scroller {
+        width: 60px;
+    }
+    div.backdrop button.scroller:after {
+        border: 25px solid rgba(0,0,0,0);
+    }
+}

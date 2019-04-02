@@ -1,0 +1,51 @@
+
+button.scroller {
+    z-index: 4;
+    background-color: rgba(0,0,0,0);
+    border-style: none;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    outline: none;
+    cursor: pointer;
+    
+    padding: 0;
+}
+button.scroller img {
+   display: block;
+    width: 100%;
+   
+}
+button.scroller:after {
+    content: "";
+    display: block;
+    border: 34px solid rgba(0, 0, 0, 0);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 100%;
+    transition: .3s;
+    /* box-shadow: 0 0 15px #eee; */
+    animation: shine 3s infinite;
+    
+ }
+ button.scroller:hover:after {
+    border-color: rgba(0,0,0,.5);
+ }
+ @keyframes shine {
+     0% {
+        
+         box-shadow: 1px 0 13px #eee;
+     }
+     50% {
+     
+        box-shadow: 1px 0 25px #eee;
+    }
+    100% {
+        box-shadow: 1px 0 13px #eee;
+    }
+
+ }
